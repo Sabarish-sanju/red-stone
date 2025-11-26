@@ -1,0 +1,126 @@
+/* ProductCard.css */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 220px;
+  margin: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.top-rated-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4757;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e91e63;
+  margin-bottom: 8px;
+}
+
+.product-rating .star {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.product-rating .star.filled {
+  color: #ffc107;
+}
+
+.product-page {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background-color: #f9f9f9;
+  margin-top: 50px;
+  /* Make the sidebar fixed */
+  position: fixed;
+  top: 0; /* start at top of viewport */
+  left: 0; /* align left */
+  height: 100vh; /* full height of viewport */
+  overflow-y: auto; /* scroll if content exceeds viewport height */
+  box-sizing: border-box;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.category-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.category-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.category-list li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Product page layout */
+.product-page {
+  display: flex;
+  gap: 20px;
+  margin-left: 220px; /* leave space for the fixed sidebar */
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Product grid styles */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+}

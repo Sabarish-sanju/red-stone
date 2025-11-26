@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,125 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("../src/assets/pexels-vika-glitter-392079-7067963.jpg")
+    center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  max-width: 650px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.cta {
+  background: #c19a6b;
+  border: none;
+  padding: 12px 35px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #a67c52;
+}
+
+/* Featured Section */
+.featured {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* About Section */
+.about {
+  padding: 70px 40px;
+  background: #faf6f1;
+  text-align: center;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  text-align: center;
 }

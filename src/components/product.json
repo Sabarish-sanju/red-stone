@@ -1,0 +1,736 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Aurora Diamond Necklace",
+      "category": "Necklace",
+      "price": 129.99,
+      "images": [],
+      "description": "A delicate diamond necklace inspired by the colors of the Aurora Borealis.",
+      "tags": ["diamond", "elegant", "premium"],
+      "rating": 4.8,
+      "reviews": [
+        { "user": "Emma", "comment": "Stunning sparkle!", "stars": 5 },
+        { "user": "Lara", "comment": "Even prettier in person.", "stars": 5 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Golden Lotus Earrings",
+      "category": "Earrings",
+      "price": 54.5,
+      "images": [
+        "https://example.com/img/earrings2_1.jpg",
+        "https://example.com/img/earrings2_2.jpg"
+      ],
+      "description": "Elegant studs shaped like lotus petals, crafted in 18k gold-plated brass.",
+      "tags": ["gold", "minimal", "floral"],
+      "rating": 4.6,
+      "reviews": [
+        {
+          "user": "Sophia",
+          "comment": "Lightweight and beautiful!",
+          "stars": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Rose Quartz Charm Bracelet",
+      "category": "Bracelet",
+      "price": 39.99,
+      "images": [
+        "https://example.com/img/bracelet3_1.jpg",
+        "https://example.com/img/bracelet3_2.jpg"
+      ],
+      "description": "A soft pink rose quartz bracelet believed to promote love and healing.",
+      "tags": ["gemstone", "rose-quartz", "healing"],
+      "rating": 4.3,
+      "reviews": [
+        { "user": "Hannah", "comment": "Beautiful stones!", "stars": 4 }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sapphire Crown Ring",
+      "category": "Ring",
+      "price": 72.0,
+      "images": [
+        "https://example.com/img/ring4_1.jpg",
+        "https://example.com/img/ring4_2.jpg"
+      ],
+      "description": "A royal-inspired ring adorned with deep blue sapphires.",
+      "tags": ["sapphire", "luxury", "statement"],
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "Mila",
+          "comment": "Feels like a queen wearing this.",
+          "stars": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Pearl Harmony Necklace",
+      "category": "Necklace",
+      "price": 89.99,
+      "images": [
+        "https://example.com/img/necklace5_1.jpg",
+        "https://example.com/img/necklace5_2.jpg"
+      ],
+      "description": "Classic freshwater pearl necklace with a modern clasp design.",
+      "tags": ["pearl", "classic", "gift"],
+      "rating": 4.9,
+      "reviews": [
+        { "user": "Alice", "comment": "Perfect for formal events.", "stars": 5 }
+      ]
+    },
+
+    {
+      "id": 6,
+      "name": "Emerald Teardrop Earrings",
+      "category": "Earrings",
+      "price": 64.99,
+      "images": [
+        "https://example.com/img/earrings6_1.jpg",
+        "https://example.com/img/earrings6_2.jpg"
+      ],
+      "description": "Vintage-style teardrop earrings featuring lab-grown emeralds.",
+      "tags": ["emerald", "vintage"],
+      "rating": 4.5,
+      "reviews": []
+    },
+
+    {
+      "id": 7,
+      "name": "Turquoise Freedom Bracelet",
+      "category": "Bracelet",
+      "price": 45.0,
+      "images": [
+        "https://example.com/img/bracelet7_1.jpg",
+        "https://example.com/img/bracelet7_2.jpg"
+      ],
+      "description": "Boho-chic turquoise beads meant to inspire creative energy.",
+      "tags": ["turquoise", "boho"],
+      "rating": 4.1,
+      "reviews": []
+    },
+
+    {
+      "id": 8,
+      "name": "Midnight Opal Ring",
+      "category": "Ring",
+      "price": 110.0,
+      "images": [
+        "https://example.com/img/ring8_1.jpg",
+        "https://example.com/img/ring8_2.jpg"
+      ],
+      "description": "An enchanting opal ring with shifting colors resembling a starry night.",
+      "tags": ["opal", "unique", "artistic"],
+      "rating": 4.9,
+      "reviews": [{ "user": "Chloe", "comment": "Mesmerizing!", "stars": 5 }]
+    },
+
+    {
+      "id": 9,
+      "name": "Silver Infinity Anklet",
+      "category": "Anklet",
+      "price": 29.99,
+      "images": [
+        "https://example.com/img/anklet9_1.jpg",
+        "https://example.com/img/anklet9_2.jpg"
+      ],
+      "description": "A stainless-steel anklet symbolizing eternal connection.",
+      "tags": ["silver", "minimal"],
+      "rating": 4.2,
+      "reviews": []
+    },
+
+    {
+      "id": 10,
+      "name": "Ruby Regal Pendant",
+      "category": "Necklace",
+      "price": 140.0,
+      "images": [
+        "https://example.com/img/necklace10_1.jpg",
+        "https://example.com/img/necklace10_2.jpg"
+      ],
+      "description": "A bold ruby gemstone set in an ornate gold frame.",
+      "tags": ["ruby", "statement", "luxury"],
+      "rating": 4.8,
+      "reviews": []
+    },
+    {
+      "id": 11,
+      "name": "Celestial Moon Bracelet",
+      "category": "Bracelet",
+      "price": 55.0,
+      "images": [
+        "https://example.com/img/11a.jpg",
+        "https://example.com/img/11b.jpg"
+      ],
+      "description": "Moon-themed bracelet in sterling silver.",
+      "tags": ["moon", "silver"],
+      "rating": 4.4,
+      "reviews": []
+    },
+    {
+      "id": 12,
+      "name": "Golden Horizon Ring",
+      "category": "Ring",
+      "price": 77.9,
+      "images": [
+        "https://example.com/img/12a.jpg",
+        "https://example.com/img/12b.jpg"
+      ],
+      "description": "Sunrise-inspired ring with a golden gradient finish.",
+      "tags": ["gold", "nature"],
+      "rating": 4.3,
+      "reviews": []
+    },
+    {
+      "id": 13,
+      "name": "Crystal Dewdrop Earrings",
+      "category": "Earrings",
+      "price": 36.0,
+      "images": [
+        "https://example.com/img/13a.jpg",
+        "https://example.com/img/13b.jpg"
+      ],
+      "description": "Light-reflective earrings featuring clear crystal drops.",
+      "tags": ["crystal", "minimal"],
+      "rating": 4.5,
+      "reviews": []
+    },
+    {
+      "id": 14,
+      "name": "Lapis Lazuli Cuff",
+      "category": "Bracelet",
+      "price": 92.5,
+      "images": [
+        "https://example.com/img/14a.jpg",
+        "https://example.com/img/14b.jpg"
+      ],
+      "description": "Bold cuff with polished lapis stones.",
+      "tags": ["lapis", "bold"],
+      "rating": 4.6,
+      "reviews": []
+    },
+    {
+      "id": 15,
+      "name": "Vintage Pearl Ring",
+      "category": "Ring",
+      "price": 68.0,
+      "images": [
+        "https://example.com/img/15a.jpg",
+        "https://example.com/img/15b.jpg"
+      ],
+      "description": "Classic pearl set on an antique-style band.",
+      "tags": ["pearl", "vintage"],
+      "rating": 4.8,
+      "reviews": []
+    },
+
+    {
+      "id": 16,
+      "name": "Garnet Blossom Necklace",
+      "category": "Necklace",
+      "price": 105.0,
+      "images": [
+        "https://example.com/img/16a.jpg",
+        "https://example.com/img/16b.jpg"
+      ],
+      "description": "Floral pendant featuring deep red garnets.",
+      "tags": ["garnet", "floral"],
+      "rating": 4.5,
+      "reviews": []
+    },
+
+    {
+      "id": 17,
+      "name": "Silver Wave Earrings",
+      "category": "Earrings",
+      "price": 45.99,
+      "images": [
+        "https://example.com/img/17a.jpg",
+        "https://example.com/img/17b.jpg"
+      ],
+      "description": "Ocean-inspired wave-shaped earrings.",
+      "tags": ["ocean", "silver"],
+      "rating": 4.2,
+      "reviews": []
+    },
+
+    {
+      "id": 18,
+      "name": "Opalite Serenity Bracelet",
+      "category": "Bracelet",
+      "price": 42.0,
+      "images": [
+        "https://example.com/img/18a.jpg",
+        "https://example.com/img/18b.jpg"
+      ],
+      "description": "Soft-toned opalite stones for calmness.",
+      "tags": ["opalite", "healing"],
+      "rating": 4.3,
+      "reviews": []
+    },
+
+    {
+      "id": 19,
+      "name": "Rose Gold Twist Ring",
+      "category": "Ring",
+      "price": 58.0,
+      "images": [
+        "https://example.com/img/19a.jpg",
+        "https://example.com/img/19b.jpg"
+      ],
+      "description": "Stylish twisted design in rose gold.",
+      "tags": ["rose-gold", "minimal"],
+      "rating": 4.4,
+      "reviews": []
+    },
+
+    {
+      "id": 20,
+      "name": "Black Onyx Shield Pendant",
+      "category": "Necklace",
+      "price": 85.0,
+      "images": [
+        "https://example.com/img/20a.jpg",
+        "https://example.com/img/20b.jpg"
+      ],
+      "description": "Bold shield pendant made with polished onyx.",
+      "tags": ["onyx", "bold"],
+      "rating": 4.6,
+      "reviews": []
+    },
+
+    {
+      "id": 21,
+      "name": "Jade Harmony Bracelet",
+      "category": "Bracelet",
+      "price": 49.0,
+      "images": [
+        "https://example.com/img/21a.jpg",
+        "https://example.com/img/21b.jpg"
+      ],
+      "description": "Natural jade beads bringing balance.",
+      "tags": ["jade"],
+      "rating": 4.3,
+      "reviews": []
+    },
+    {
+      "id": 22,
+      "name": "Amethyst Dream Ring",
+      "category": "Ring",
+      "price": 73.0,
+      "images": [
+        "https://example.com/img/22a.jpg",
+        "https://example.com/img/22b.jpg"
+      ],
+      "description": "Deep purple amethyst centerpiece.",
+      "tags": ["amethyst"],
+      "rating": 4.7,
+      "reviews": []
+    },
+    {
+      "id": 23,
+      "name": "Citrine Glow Earrings",
+      "category": "Earrings",
+      "price": 33.0,
+      "images": [
+        "https://example.com/img/23a.jpg",
+        "https://example.com/img/23b.jpg"
+      ],
+      "description": "Bright citrine stones for positivity.",
+      "tags": ["citrine"],
+      "rating": 4.1,
+      "reviews": []
+    },
+    {
+      "id": 24,
+      "name": "Silver Feather Necklace",
+      "category": "Necklace",
+      "price": 59.0,
+      "images": [
+        "https://example.com/img/24a.jpg",
+        "https://example.com/img/24b.jpg"
+      ],
+      "description": "Feather pendant symbolizing freedom.",
+      "tags": ["silver", "boho"],
+      "rating": 4.2,
+      "reviews": []
+    },
+    {
+      "id": 25,
+      "name": "Ruby Stud Earrings",
+      "category": "Earrings",
+      "price": 95.0,
+      "images": [
+        "https://example.com/img/25a.jpg",
+        "https://example.com/img/25b.jpg"
+      ],
+      "description": "Simple and elegant ruby studs.",
+      "tags": ["ruby"],
+      "rating": 4.9,
+      "reviews": []
+    },
+
+    {
+      "id": 26,
+      "name": "Aquamarine Drop Necklace",
+      "category": "Necklace",
+      "price": 120.0,
+      "images": [
+        "https://example.com/img/26a.jpg",
+        "https://example.com/img/26b.jpg"
+      ],
+      "description": "Soft blue aquamarine teardrop.",
+      "tags": ["aquamarine"],
+      "rating": 4.8,
+      "reviews": []
+    },
+    {
+      "id": 27,
+      "name": "Geometric Silver Earrings",
+      "category": "Earrings",
+      "price": 28.0,
+      "images": [
+        "https://example.com/img/27a.jpg",
+        "https://example.com/img/27b.jpg"
+      ],
+      "description": "Modern geometric shapes.",
+      "tags": ["modern"],
+      "rating": 4,
+      "reviews": []
+    },
+    {
+      "id": 28,
+      "name": "Tourmaline Energy Bracelet",
+      "category": "Bracelet",
+      "price": 47.0,
+      "images": [
+        "https://example.com/img/28a.jpg",
+        "https://example.com/img/28b.jpg"
+      ],
+      "description": "Colorful tourmaline stones.",
+      "tags": ["tourmaline"],
+      "rating": 4.4,
+      "reviews": []
+    },
+    {
+      "id": 29,
+      "name": "Smoky Quartz Ring",
+      "category": "Ring",
+      "price": 69.0,
+      "images": [
+        "https://example.com/img/29a.jpg",
+        "https://example.com/img/29b.jpg"
+      ],
+      "description": "Earthy smoky quartz centerpiece.",
+      "tags": ["quartz"],
+      "rating": 4.5,
+      "reviews": []
+    },
+    {
+      "id": 30,
+      "name": "Classic Gold Band",
+      "category": "Ring",
+      "price": 52.0,
+      "images": [
+        "https://example.com/img/30a.jpg",
+        "https://example.com/img/30b.jpg"
+      ],
+      "description": "Minimalist gold-plated band.",
+      "tags": ["gold", "classic"],
+      "rating": 4.3,
+      "reviews": []
+    },
+
+    {
+      "id": 31,
+      "name": "Mother of Pearl Pendant",
+      "category": "Necklace",
+      "price": 80.0,
+      "images": [
+        "https://example.com/img/31a.jpg",
+        "https://example.com/img/31b.jpg"
+      ],
+      "description": "Shimmering mother of pearl disc.",
+      "tags": ["pearl"],
+      "rating": 4.7,
+      "reviews": []
+    },
+    {
+      "id": 32,
+      "name": "Black Pearl Earrings",
+      "category": "Earrings",
+      "price": 88.0,
+      "images": [
+        "https://example.com/img/32a.jpg",
+        "https://example.com/img/32b.jpg"
+      ],
+      "description": "Elegant black freshwater pearls.",
+      "tags": ["pearl"],
+      "rating": 4.8,
+      "reviews": []
+    },
+    {
+      "id": 33,
+      "name": "Sunstone Radiance Bracelet",
+      "category": "Bracelet",
+      "price": 40.0,
+      "images": [
+        "https://example.com/img/33a.jpg",
+        "https://example.com/img/33b.jpg"
+      ],
+      "description": "Warm-toned sunstone beads.",
+      "tags": ["sunstone"],
+      "rating": 4.2,
+      "reviews": []
+    },
+    {
+      "id": 34,
+      "name": "Minimal Silver Ring",
+      "category": "Ring",
+      "price": 25.0,
+      "images": [
+        "https://example.com/img/34a.jpg",
+        "https://example.com/img/34b.jpg"
+      ],
+      "description": "Slim and elegant sterling silver band.",
+      "tags": ["minimal"],
+      "rating": 4.1,
+      "reviews": []
+    },
+    {
+      "id": 35,
+      "name": "Halo Diamond Earrings",
+      "category": "Earrings",
+      "price": 199.0,
+      "images": [
+        "https://example.com/img/35a.jpg",
+        "https://example.com/img/35b.jpg"
+      ],
+      "description": "Halo-set sparkling diamonds.",
+      "tags": ["diamond"],
+      "rating": 4.9,
+      "reviews": []
+    },
+
+    {
+      "id": 36,
+      "name": "Rose Quartz Heart Pendant",
+      "category": "Necklace",
+      "price": 55.0,
+      "images": [
+        "https://example.com/img/36a.jpg",
+        "https://example.com/img/36b.jpg"
+      ],
+      "description": "Heart-shaped rose quartz.",
+      "tags": ["rose-quartz"],
+      "rating": 4.3,
+      "reviews": []
+    },
+    {
+      "id": 37,
+      "name": "Silver Charm Anklet",
+      "category": "Anklet",
+      "price": 23.0,
+      "images": [
+        "https://example.com/img/37a.jpg",
+        "https://example.com/img/37b.jpg"
+      ],
+      "description": "Cute dangling charms.",
+      "tags": ["anklet"],
+      "rating": 4.0,
+      "reviews": []
+    },
+    {
+      "id": 38,
+      "name": "Obsidian Protection Bracelet",
+      "category": "Bracelet",
+      "price": 44.0,
+      "images": [
+        "https://example.com/img/38a.jpg",
+        "https://example.com/img/38b.jpg"
+      ],
+      "description": "Matte black obsidian beads.",
+      "tags": ["obsidian"],
+      "rating": 4.6,
+      "reviews": []
+    },
+    {
+      "id": 39,
+      "name": "Gold Leaf Earrings",
+      "category": "Earrings",
+      "price": 31.0,
+      "images": [
+        "https://example.com/img/39a.jpg",
+        "https://example.com/img/39b.jpg"
+      ],
+      "description": "Nature-inspired leaf design.",
+      "tags": ["gold"],
+      "rating": 4.2,
+      "reviews": []
+    },
+    {
+      "id": 40,
+      "name": "Blue Topaz Ring",
+      "category": "Ring",
+      "price": 120.0,
+      "images": [
+        "https://example.com/img/40a.jpg",
+        "https://example.com/img/40b.jpg"
+      ],
+      "description": "Sky-blue topaz gemstone.",
+      "tags": ["topaz"],
+      "rating": 4.7,
+      "reviews": []
+    },
+
+    {
+      "id": 41,
+      "name": "Classic Chain Bracelet",
+      "category": "Bracelet",
+      "price": 30.0,
+      "images": [
+        "https://example.com/img/41a.jpg",
+        "https://example.com/img/41b.jpg"
+      ],
+      "description": "Timeless chain-link bracelet.",
+      "tags": ["classic"],
+      "rating": 4.1,
+      "reviews": []
+    },
+    {
+      "id": 42,
+      "name": "Gold Snake Necklace",
+      "category": "Necklace",
+      "price": 92.0,
+      "images": [
+        "https://example.com/img/42a.jpg",
+        "https://example.com/img/42b.jpg"
+      ],
+      "description": "Sleek snake-chain necklace.",
+      "tags": ["gold"],
+      "rating": 4.5,
+      "reviews": []
+    },
+    {
+      "id": 43,
+      "name": "Peridot Drop Earrings",
+      "category": "Earrings",
+      "price": 59.0,
+      "images": [
+        "https://example.com/img/43a.jpg",
+        "https://example.com/img/43b.jpg"
+      ],
+      "description": "Bright green peridot stones.",
+      "tags": ["peridot"],
+      "rating": 4.3,
+      "reviews": []
+    },
+    {
+      "id": 44,
+      "name": "Ruby Eternity Ring",
+      "category": "Ring",
+      "price": 150.0,
+      "images": [
+        "https://example.com/img/44a.jpg",
+        "https://example.com/img/44b.jpg"
+      ],
+      "description": "Ruby stones around entire band.",
+      "tags": ["ruby"],
+      "rating": 4.9,
+      "reviews": []
+    },
+    {
+      "id": 45,
+      "name": "Crystal Choker",
+      "category": "Necklace",
+      "price": 26.0,
+      "images": [
+        "https://example.com/img/45a.jpg",
+        "https://example.com/img/45b.jpg"
+      ],
+      "description": "Trendy crystal-beaded choker.",
+      "tags": ["crystal", "choker"],
+      "rating": 4.1,
+      "reviews": []
+    },
+
+    {
+      "id": 46,
+      "name": "Tourmaline Stud Earrings",
+      "category": "Earrings",
+      "price": 79.0,
+      "images": [
+        "https://example.com/img/46a.jpg",
+        "https://example.com/img/46b.jpg"
+      ],
+      "description": "Pink tourmaline studs.",
+      "tags": ["tourmaline"],
+      "rating": 4.5,
+      "reviews": []
+    },
+    {
+      "id": 47,
+      "name": "Silver Star Necklace",
+      "category": "Necklace",
+      "price": 34.0,
+      "images": [
+        "https://example.com/img/47a.jpg",
+        "https://example.com/img/47b.jpg"
+      ],
+      "description": "Dainty celestial star pendant.",
+      "tags": ["star"],
+      "rating": 4.2,
+      "reviews": []
+    },
+    {
+      "id": 48,
+      "name": "Malachite Energy Bracelet",
+      "category": "Bracelet",
+      "price": 48.0,
+      "images": [
+        "https://example.com/img/48a.jpg",
+        "https://example.com/img/48b.jpg"
+      ],
+      "description": "Green malachite beads.",
+      "tags": ["malachite"],
+      "rating": 4.4,
+      "reviews": []
+    },
+    {
+      "id": 49,
+      "name": "Rose Gold Hoop Earrings",
+      "category": "Earrings",
+      "price": 29.0,
+      "images": [
+        "https://example.com/img/49a.jpg",
+        "https://example.com/img/49b.jpg"
+      ],
+      "description": "Simple rose gold hoops.",
+      "tags": ["rose-gold"],
+      "rating": 4.3,
+      "reviews": []
+    },
+    {
+      "id": 50,
+      "name": "Diamond Solitaire Ring",
+      "category": "Ring",
+      "price": 220.0,
+      "images": [
+        "https://example.com/img/50a.jpg",
+        "https://example.com/img/50b.jpg"
+      ],
+      "description": "Classic solitaire diamond ring.",
+      "tags": ["diamond", "luxury"],
+      "rating": 5.0,
+      "reviews": []
+    }
+  ]
+}
