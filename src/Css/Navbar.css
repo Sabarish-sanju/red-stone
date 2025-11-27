@@ -38,12 +38,39 @@
   color: #ff4500;
 }
 
-/* Icons */
 .nav-icons {
   display: flex;
+  align-items: center;
   gap: 20px;
+  position: relative;
 }
 
+.icon {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.cart-link {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px; /* move it above the icon */
+  right: -10px; /* move it to the right edge */
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+}
 .icon {
   font-size: 1.2rem;
   cursor: pointer;

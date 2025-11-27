@@ -1,46 +1,3 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 * {
   margin: 0;
   padding: 0;
@@ -144,17 +101,16 @@
 /* About Section */
 .about {
   padding: 70px 40px;
-  background: #faf6f1;
+  text-align: center;
+  position: relative;
+  height: 50vh;
+  background: wheat;
+  color: #c19a6b;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.about p {
-  max-width: 600px;
-  margin: 0 auto;
-  color: #555;
-}
-
-/* Footer */
 .footer {
   padding: 20px;
   background: #222;

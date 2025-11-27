@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaBars, FaTimes, FaUser } from "react-icons/fa";
-import "./Navbar.css";
+import "../Css/Navbar.css";
+import { ProductContext } from "../Context/ProductContext";
+import { useContext } from "react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { cartCount } = useContext(ProductContext);
 
   return (
     <nav className="navbar">
@@ -48,8 +51,13 @@ export default function Navbar() {
         <Link to="/account">
           <FaUser className="icon" />
         </Link>
-        <Link to="/cart">
+        <Link
+          to="/cart"
+          className="cart-link"
+          onClick={() => setMobileMenuOpen(false)}
+        >
           <FaShoppingCart className="icon" />
+          {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </Link>
       </div>
     </nav>

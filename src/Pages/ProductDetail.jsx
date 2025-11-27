@@ -1,12 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import productsData from "./product.json";
+import productsData from "../components/product.json";
 import Navbar from "./Navbar";
-import { ProductContext } from "./ProductContext";
+import { ProductContext } from "../Context/ProductContext";
 import image1 from "../assets/image1.jpg";
 import image2 from "../assets/image2.jpg";
 import image3 from "../assets/image3.jpg";
-import "./ProductDetail.css";
+import "../Css/ProductDetail.css";
+import { toast } from "react-toastify";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -88,7 +89,13 @@ export default function ProductDetail() {
 
           <button
             className="add-to-cart-btn"
-            onClick={() => addToCart(product)}
+            onClick={() => {
+              addToCart(product);
+              toast.success("Product added to cart!", {
+                autoClose: 1500,
+                hideProgressBar: true,
+              });
+            }}
           >
             Add to Cart
           </button>
@@ -98,20 +105,22 @@ export default function ProductDetail() {
           <ul className="reviews-list">
             {product.reviews.map((review, idx) => (
               <li key={idx} className="review-card">
-                <div className="user-name">{review.user}</div>
-                <div className="review-rating">
-                  {Array.from({ length: 5 }, (_, index) => (
-                    <span
-                      key={index}
-                      className={
-                        index < Math.round(review.rating)
-                          ? "star filled"
-                          : "star"
-                      }
-                    >
-                      ★
-                    </span>
-                  ))}
+                <div className="rev">
+                  <div className="user-name">{review.user}</div>
+                  <div className="review-rating">
+                    {Array.from({ length: 5 }, (_, index) => (
+                      <span
+                        key={index}
+                        className={
+                          index < Math.round(review.stars)
+                            ? "star filled"
+                            : "star"
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <div className="comment">{review.comment}</div>
               </li>

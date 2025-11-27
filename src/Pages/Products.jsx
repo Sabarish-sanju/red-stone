@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
-import productsData from "./product.json";
-import "./Product.css";
+import Navbar from "../Pages/Navbar";
+import productsData from "../components/product.json";
+import "../Css/Product.css";
 import image1 from "../assets/image1.jpg";
 
 export default function Products() {

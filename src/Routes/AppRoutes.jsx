@@ -1,0 +1,43 @@
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../Pages/Home";
+import About from "../Pages/About";
+import ErrorComponent from "../components/ErrorComponent";
+import Contact from "../Pages/Contact";
+import Cart from "../Pages/Cart";
+import Products from "../Pages/Products";
+import ProductDetail from "../Pages/ProductDetail";
+
+const Router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/Products",
+    element: <Products />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/product/:productId",
+    element: <ProductDetail />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/Contact",
+    element: <Contact />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/About",
+    element: <About />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
+    errorElement: <ErrorComponent />,
+  },
+]);
+
+export default Router;
