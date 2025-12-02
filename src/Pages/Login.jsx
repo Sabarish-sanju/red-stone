@@ -1,10 +1,9 @@
 import React from "react";
-import "../Css/About.css";
-import jewelryImage from "../assets/bg1.jpg";
-import Navbar from "./Navbar";
+import "../Css/Login.css";
 import Stack from "../components/Stack";
+import Navbar from "./Navbar";
 
-export default function About() {
+export default function Login() {
   const images = [
     {
       id: 1,
@@ -23,26 +22,11 @@ export default function About() {
       img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
-
   return (
     <>
       <Navbar />
-      <div className="about-container">
-        <div className="about-content">
-          <div className="text-section">
-            <h1>About RedStone</h1>
-            <p>
-              Welcome to <strong>RedStone</strong> — where elegance meets
-              craftsmanship. Our jewelry is crafted with passion, blending
-              timeless designs with modern trends. Every piece tells a story,
-              making your moments shine brighter.
-            </p>
-            <p>
-              From delicate necklaces to statement rings, RedStone is committed
-              to quality, beauty, and sustainability. Join us in celebrating the
-              art of fine jewelry.
-            </p>
-          </div>
+      <div className="login-container">
+        <div className="login-image">
           <div className="image-section">
             <Stack
               randomRotation={true}
@@ -53,6 +37,36 @@ export default function About() {
             />
             ;
           </div>
+        </div>
+
+        <div className="login-form">
+          <h2 className="brand-title">RedStone Jewelers</h2>
+
+          <p className="subtitle">Login to continue your jewelry experience</p>
+
+          <form>
+            <div className="input-group">
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email" required />
+            </div>
+
+            <div className="input-group">
+              <label>Password</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <button type="submit" className="login-btn">
+              Login
+            </button>
+
+            <p className="signup-text">
+              Don’t have an account? <span>Create one</span>
+            </p>
+          </form>
         </div>
       </div>
     </>

@@ -6,6 +6,7 @@ import Contact from "../Pages/Contact";
 import Cart from "../Pages/Cart";
 import Products from "../Pages/Products";
 import ProductDetail from "../Pages/ProductDetail";
+import Login from "../Pages/Login";
 
 const Router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const Router = createBrowserRouter([
   {
     path: "/Cart",
     element: <Cart />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "//Login",
+    element: <Login />,
     errorElement: <ErrorComponent />,
   },
 ]);

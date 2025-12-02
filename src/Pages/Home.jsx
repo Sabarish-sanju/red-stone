@@ -47,7 +47,11 @@ export default function Home() {
           <h2>Featured Collection</h2>
           <div className="grid">
             {collection.map((value, index) => (
-              <div className="card" key={index}>
+              <div
+                className="card"
+                key={index}
+                onClick={() => navigate("/products")}
+              >
                 <img src={value.image} alt={value.product} />
                 <p>{value.product}</p>
                 <span>price:{value.price}</span>

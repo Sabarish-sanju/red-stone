@@ -61,7 +61,7 @@
 
 .product-detail-info {
   flex: 1;
-  min-width: 280px; /* prevents it from shrinking too much */
+  min-width: 280px;
 }
 
 .product-detail-info h2 {
@@ -159,7 +159,6 @@
   gap: 12px;
 }
 
-/* Single review card */
 .review-card {
   background-color: #f9f9f9;
   padding: 15px 20px;
@@ -172,14 +171,12 @@
   transform: translateY(-2px);
 }
 
-/* User info */
 .review-card .user-name {
   font-weight: bold;
   color: #007bff;
   margin-bottom: 5px;
 }
 
-/* Rating stars inside review */
 .review-card .review-rating {
   margin-bottom: 8px;
 }
@@ -193,7 +190,6 @@
   color: #ffc107;
 }
 
-/* Review comment */
 .review-card .comment {
   font-size: 0.95rem;
   color: #555;

@@ -7,6 +7,7 @@ import image1 from "../assets/image1.jpg";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [sidebarOpen, setSidebarOpen] = useState(false); // NEW
   const navigate = useNavigate();
 
   const categories = [
@@ -58,15 +59,27 @@ export default function Products() {
   return (
     <>
       <Navbar />
+
+      <button className="burger-btn" onClick={() => setSidebarOpen(true)}>
+        ☰
+      </button>
+
       <div className="product-page">
-        <aside className="sidebar">
+        <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+          <button className="close-btn" onClick={() => setSidebarOpen(false)}>
+            ✕
+          </button>
+
           <h3>Categories</h3>
           <ul className="category-list">
             {categories.map((category) => (
               <li
                 key={category}
                 className={category === selectedCategory ? "active" : ""}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setSidebarOpen(false);
+                }}
               >
                 {category}
               </li>

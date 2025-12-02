@@ -6,10 +6,9 @@
 
 .container {
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #fff;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   height: 90vh;

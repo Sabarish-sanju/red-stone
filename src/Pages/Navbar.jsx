@@ -48,7 +48,7 @@ export default function Navbar() {
       </ul>
 
       <div className="nav-icons">
-        <Link to="/account">
+        <Link to="/login">
           <FaUser className="icon" />
         </Link>
         <Link
