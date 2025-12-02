@@ -6,7 +6,6 @@
 
 .container {
   font-family: "Poppins", sans-serif;
-  color: #fff;
 }
 
 .hero {
@@ -62,7 +61,6 @@
   background: #a67c52;
 }
 
-/* Featured Section */
 .featured {
   padding: 60px 40px;
   text-align: center;

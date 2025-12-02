@@ -4,6 +4,7 @@ import Navbar from "../Pages/Navbar";
 import productsData from "../components/product.json";
 import "../Css/Product.css";
 import image1 from "../assets/image1.jpg";
+import { CiFilter } from "react-icons/ci";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -61,7 +62,7 @@ export default function Products() {
       <Navbar />
 
       <button className="burger-btn" onClick={() => setSidebarOpen(true)}>
-        ☰
+        <CiFilter />
       </button>
 
       <div className="product-page">
