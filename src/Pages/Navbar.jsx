@@ -17,6 +17,7 @@ export default function Navbar() {
         </Link>
       </div>
 
+      {/* Hamburger menu */}
       <div
         className="menu-icon"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -47,15 +48,12 @@ export default function Navbar() {
         </li>
       </ul>
 
+      {/* Nav icons come right after logo in DOM */}
       <div className="nav-icons">
         <Link to="/login">
           <FaUser className="icon" />
         </Link>
-        <Link
-          to="/cart"
-          className="cart-link"
-          onClick={() => setMobileMenuOpen(false)}
-        >
+        <Link to="/cart" className="cart-link">
           <FaShoppingCart className="icon" />
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
         </Link>
