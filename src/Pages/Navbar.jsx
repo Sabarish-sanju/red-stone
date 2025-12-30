@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaBars, FaTimes, FaUser } from "react-icons/fa";
 import "../Css/Navbar.css";
 import { ProductContext } from "../Context/ProductContext";
-import { useContext } from "react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
   const { cartCount } = useContext(ProductContext);
+  const { isLoggedIn } = useContext(ProductContext);
+
+  const { handleLogout } = useContext(ProductContext);
 
   return (
     <nav className="navbar">
@@ -17,7 +20,6 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Hamburger menu */}
       <div
         className="menu-icon"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -48,11 +50,31 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Nav icons come right after logo in DOM */}
       <div className="nav-icons">
-        <Link to="/login">
+        <div
+          className="user-dropdown"
+          onClick={() => setUserMenuOpen(!userMenuOpen)}
+        >
           <FaUser className="icon" />
-        </Link>
+
+          {userMenuOpen && (
+            <div className="dropdown-menu">
+              {!isLoggedIn ? (
+                <>
+                  <Link to="/login">Login</Link>
+                  <Link to="/signup">Signup</Link>
+                </>
+              ) : (
+                <>
+                  <button className="logout-btn" onClick={handleLogout}>
+                    Logout
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+
         <Link to="/cart" className="cart-link">
           <FaShoppingCart className="icon" />
           {cartCount > 0 && <span className="cart-count">{cartCount}</span>}

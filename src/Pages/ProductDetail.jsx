@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import productsData from "../components/product.json";
 import Navbar from "./Navbar";
 import { ProductContext } from "../Context/ProductContext";
@@ -11,27 +11,57 @@ import { toast } from "react-toastify";
 
 export default function ProductDetail() {
   const { productId } = useParams();
-  const { addToCart } = useContext(ProductContext);
+  const { addToCart, isLoggedIn } = useContext(ProductContext);
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const Navigate = useNavigate();
 
   const defaultImages = [image1, image2, image3];
-
   const [mainImage, setMainImage] = useState(image1);
 
   useEffect(() => {
-    const found = productsData.products.find(
-      (p) => p.id.toString() === productId
-    );
-    if (found) {
-      setProduct(found);
-      const images =
-        found.images && found.images.length ? found.images : defaultImages;
-      setMainImage(images[0]);
-    }
+    setLoading(true);
+    const timer = setTimeout(() => {
+      const found = productsData.products.find(
+        (p) => p.id.toString() === productId
+      );
+
+      if (found) {
+        setProduct(found);
+        const images =
+          found.images && found.images.length ? found.images : defaultImages;
+        setMainImage(images[0]);
+      } else {
+        setProduct(null);
+      }
+
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, [productId]);
 
+  if (loading) {
+    return (
+      <>
+        <Navbar />
+        <div className="loader-container">
+          <div className="loader"></div>
+          <p>Loading product...</p>
+        </div>
+      </>
+    );
+  }
+
   if (!product) {
-    return <p>Product not found. Please check the URL.</p>;
+    return (
+      <>
+        <Navbar />
+        <p style={{ textAlign: "center" }}>
+          Product not found. Please check the URL.
+        </p>
+      </>
+    );
   }
 
   const images =
@@ -49,6 +79,7 @@ export default function ProductDetail() {
   return (
     <>
       <Navbar />
+
       <div className="product-detail-page">
         <div className="product-detail-left">
           <div className="product-detail-image">
@@ -83,13 +114,19 @@ export default function ProductDetail() {
 
         <div className="product-detail-info">
           <h2>{product.name}</h2>
-          <p className="price">${product.price.toFixed(2)}</p>
+          <p className="Dprice">${product.price.toFixed(2)}</p>
           <div className="rating">{stars}</div>
           <p>{product.description}</p>
 
           <button
             className="add-to-cart-btn"
             onClick={() => {
+              if (!isLoggedIn) {
+                toast.info("Please login to add items to cart");
+                setTimeout(() => Navigate("/login"), 1000);
+                return;
+              }
+
               addToCart(product);
               toast.success("Product added to cart!", {
                 autoClose: 1500,

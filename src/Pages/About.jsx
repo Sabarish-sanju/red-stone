@@ -1,6 +1,5 @@
 import React from "react";
 import "../Css/About.css";
-import jewelryImage from "../assets/bg1.jpg";
 import Navbar from "./Navbar";
 import Stack from "../components/Stack";
 

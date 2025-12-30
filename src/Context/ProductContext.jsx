@@ -1,10 +1,32 @@
-import React, { createContext, useState, useMemo } from "react";
+import React, { createContext, useState, useMemo, useEffect } from "react";
 
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [cart, setCart] = useState([]);
+
+  const [cart, setCart] = useState(() => {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  });
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !!localStorage.getItem("jwtToken")
+  );
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("cart");
+    setCart([]);
+    setIsLoggedIn(false);
+  };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
   const addToCart = (product) => {
     setCart((prev) => {
@@ -49,6 +71,9 @@ export const ProductProvider = ({ children }) => {
         removeFromCart,
         updateQty,
         cartCount,
+        isLoggedIn,
+        handleLogout,
+        handleLogin,
       }}
     >
       {children}

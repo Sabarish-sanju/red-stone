@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "../Css/Login.css";
 import Stack from "../components/Stack";
 import Navbar from "./Navbar";
+import api from "../../Backend/api.js";
+import { Link, useNavigate } from "react-router-dom";
+import { ProductContext } from "../Context/ProductContext";
 
 export default function Login() {
+  const { handleLogin } = useContext(ProductContext);
+  const [data, setData] = useState({
+    name: "",
+    password: "",
+  });
+  const Navigate = useNavigate();
   const images = [
     {
       id: 1,
@@ -22,6 +31,26 @@ export default function Login() {
       img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
+
+  function handleData(e) {
+    setData({ ...data, [e.target.name]: e.target.value });
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(data);
+
+    try {
+      const res = await api.post("/login", data);
+      const { token } = res.data;
+      localStorage.setItem("jwtToken", token);
+      handleLogin();
+      Navigate("/");
+    } catch (err) {
+      alert("Something went wrong");
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -44,17 +73,27 @@ export default function Login() {
 
           <p className="subtitle">Login to continue your jewelry experience</p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="input-group">
               <label>Email</label>
-              <input type="email" placeholder="Enter your email" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Username"
+                value={data.name}
+                onChange={handleData}
+                required
+              />
             </div>
 
             <div className="input-group">
               <label>Password</label>
               <input
                 type="password"
-                placeholder="Enter your password"
+                name="password"
+                placeholder="Password"
+                value={data.password}
+                onChange={handleData}
                 required
               />
             </div>
@@ -64,7 +103,10 @@ export default function Login() {
             </button>
 
             <p className="signup-text">
-              Don’t have an account? <span>Create one</span>
+              Don’t have an account?
+              <Link to="/Signup">
+                <span>Create one</span>
+              </Link>
             </p>
           </form>
         </div>

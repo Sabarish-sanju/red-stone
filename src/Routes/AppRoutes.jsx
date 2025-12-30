@@ -7,6 +7,8 @@ import Cart from "../Pages/Cart";
 import Products from "../Pages/Products";
 import ProductDetail from "../Pages/ProductDetail";
 import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
+import Checkout from "../Pages/Checkout";
 
 const Router = createBrowserRouter([
   {
@@ -40,8 +42,18 @@ const Router = createBrowserRouter([
     errorElement: <ErrorComponent />,
   },
   {
-    path: "//Login",
+    path: "/Login",
     element: <Login />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/Signup",
+    element: <Signup />,
+    errorElement: <ErrorComponent />,
+  },
+  {
+    path: "/Checkout",
+    element: <Checkout />,
     errorElement: <ErrorComponent />,
   },
 ]);

@@ -1,75 +1,204 @@
 .cart-page {
-  padding: 30px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-.cart-container {
+.cart-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Layout */
+.cart-layout {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.cart-card {
+/* LEFT TABLE */
+.cart-left {
+  flex: 2;
+}
+
+/* Header & rows */
+.cart-header,
+.cart-row {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 1.5fr 0.5fr;
+  align-items: center;
+  justify-items: center; /* centers content in each grid column */
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.cart-header {
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+  color: #555;
+  text-align: center;
+}
+
+.cart-row {
+  border-bottom: 1px solid #eee;
+}
+
+/* Product info */
+.prod-info {
   display: flex;
   align-items: center;
-  padding: 15px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  justify-content: flex-start; /* align content left inside grid cell */
+  width: 100%; /* fill entire grid cell for equal width */
 }
 
-.cart-img {
-  width: 120px;
-  height: 120px;
+.prod-info img {
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  margin-right: 20px;
   border-radius: 8px;
 }
 
-.cart-info {
-  flex: 1;
+.prod-info h4 {
+  margin: 0;
+  font-size: 1rem;
+  text-align: left; /* left align text */
 }
 
-.cart-price {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.price {
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
+/* Quantity controls */
 .qty-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .qty-controls button {
-  padding: 5px 12px;
-  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background: #fff;
   cursor: pointer;
+  font-size: 16px;
 }
 
+.qty-controls span {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Row total */
+.row-total {
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Remove icon */
 .remove-btn {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #e74c3c;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.remove-btn:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+/* RIGHT SUMMARY */
+.cart-right {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.totals-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.grand-total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 0.8rem;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem 0;
+  background: #000;
   color: #fff;
   border: none;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-.cart-total {
-  margin-top: 25px;
-  padding: 20px;
-  background: #f7f7f7;
-  border-radius: 8px;
-  text-align: right;
+.checkout-btn:hover {
+  background: #333;
 }
 
-.checkout-btn {
-  padding: 10px 18px;
-  background: #27ae60;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .cart-layout {
+    flex-direction: column;
+  }
+
+  .cart-header {
+    display: none;
+  }
+
+  .cart-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    justify-items: start;
+  }
+
+  .prod-info {
+    justify-content: flex-start;
+  }
+
+  .row-total {
+    text-align: left;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
 }
