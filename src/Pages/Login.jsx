@@ -8,27 +8,30 @@ import { ProductContext } from "../Context/ProductContext";
 
 export default function Login() {
   const { handleLogin } = useContext(ProductContext);
+
   const [data, setData] = useState({
-    name: "",
+    email: "",
     password: "",
   });
-  const Navigate = useNavigate();
+
+  const navigate = useNavigate();
+
   const images = [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1631965004544-1762fc696476?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1631965004544-1762fc696476?q=80&w=1935",
     },
     {
       id: 2,
-      img: "https://plus.unsplash.com/premium_photo-1661645433820-24c8604e4db5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://plus.unsplash.com/premium_photo-1661645433820-24c8604e4db5?q=80&w=870",
     },
     {
       id: 3,
-      img: "https://plus.unsplash.com/premium_photo-1681276170281-cf50a487a1b7?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://plus.unsplash.com/premium_photo-1681276170281-cf50a487a1b7?q=80&w=387",
     },
     {
       id: 4,
-      img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      img: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=387",
     },
   ];
 
@@ -38,16 +41,22 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     console.log(data);
 
     try {
       const res = await api.post("/login", data);
+
       const { token } = res.data;
+
       localStorage.setItem("jwtToken", token);
+
       handleLogin();
-      Navigate("/");
+
+      navigate("/");
     } catch (err) {
-      alert("Something went wrong");
+      console.error(err);
+      alert("Invalid email or password");
     }
   };
 
@@ -64,7 +73,6 @@ export default function Login() {
               cardDimensions={{ width: 300, height: 300 }}
               cardsData={images}
             />
-            ;
           </div>
         </div>
 
@@ -77,10 +85,10 @@ export default function Login() {
             <div className="input-group">
               <label>Email</label>
               <input
-                type="text"
-                name="name"
-                placeholder="Username"
-                value={data.name}
+                type="email"
+                name="email"
+                placeholder="Enter email"
+                value={data.email}
                 onChange={handleData}
                 required
               />
