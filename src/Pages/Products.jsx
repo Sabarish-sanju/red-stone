@@ -8,7 +8,7 @@ import { CiFilter } from "react-icons/ci";
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [sidebarOpen, setSidebarOpen] = useState(false); // NEW
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
   const categories = [
@@ -39,8 +39,9 @@ export default function Products() {
         {product.rating >= 4.8 && (
           <div className="top-rated-badge">Top Rated</div>
         )}
+
         <img
-          src={product.images[0] || image1}
+          src={product.images?.[0] || image1}
           alt={product.name}
           className="product-image"
           onError={(e) => {
@@ -48,10 +49,13 @@ export default function Products() {
             e.target.src = image1;
           }}
         />
+
         <div className="product-info">
-          <h3>{product.name}</h3>
-          <p>${product.price.toFixed(2)}</p>
+          <h4>{product.name}</h4>
+
           <div className="product-rating">{stars}</div>
+
+          <div className="product-price">${product.price.toFixed(2)}</div>
         </div>
       </div>
     );
@@ -61,17 +65,20 @@ export default function Products() {
     <>
       <Navbar />
 
+     
       <button className="burger-btn" onClick={() => setSidebarOpen(true)}>
         <CiFilter />
       </button>
 
       <div className="product-page">
+        
         <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
           <button className="close-btn" onClick={() => setSidebarOpen(false)}>
             ✕
           </button>
 
           <h3>Categories</h3>
+
           <ul className="category-list">
             {categories.map((category) => (
               <li
@@ -88,6 +95,7 @@ export default function Products() {
           </ul>
         </aside>
 
+        
         <div className="product-grid">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />

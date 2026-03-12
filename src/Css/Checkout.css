@@ -6,7 +6,11 @@
   min-height: 100vh;
   background: #f6f6f5;
   padding: 2rem;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
 }
 
 .checkout-container {
@@ -130,7 +134,8 @@
 }
 
 .discount-row button {
-  background: #c7d2a0;
+  background: #a6854f;
+  color: white;
   border: none;
   padding: 0 1.2rem;
   border-radius: 10px;
@@ -169,8 +174,8 @@
 
 /* Button */
 .place-order-btn {
-  background: #3f4a2a;
-  color: #fff;
+  background: #a6854f;
+  color: white;
   border: none;
   padding: 0.9rem;
   border-radius: 12px;
@@ -179,7 +184,7 @@
 }
 
 .place-order-btn:hover {
-  background: #2f3820;
+  background: #7b6239
 }
 
 @media (max-width: 900px) {

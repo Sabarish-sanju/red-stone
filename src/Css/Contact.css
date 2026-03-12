@@ -1,29 +1,92 @@
-.Contact {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.Contact input,
-textarea {
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  min-height: 90vh;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.Contact button {
-  background-color: #b30000;
+/* Left Side Form */
+.contact-form {
+  flex: 1;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-width: 300px;
+}
+
+/* Form Text */
+.contact-form h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Form Inputs */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c6a16e;
+  outline: none;
+}
+
+/* Submit Button */
+.contact-form button {
+  padding: 12px;
+  background: #c6a16e;
   color: white;
   border: none;
-  padding: 10px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  border-radius: 4px;
-  margin-top: 10px;
+  font-size: 16px;
+  transition: background 0.3s;
 }
 
-.Contact button:hover {
-  background-color: #e60000;
+.contact-form button:hover {
+  background: #a68454;
+}
+
+/* Right Side Map */
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 450px;
+}
+
+/* ================= Mobile Responsive ================= */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column-reverse; /* Stack form and map vertically */
+    padding: 10px;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-map {
+    width: 90%;
+    padding: 20px;
+  }
 }

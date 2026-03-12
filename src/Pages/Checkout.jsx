@@ -36,6 +36,7 @@ export default function Checkout() {
               </div>
             </section>
 
+            {/*
             <section className="checkout-form payment-section">
               <h3>
                 Payment Method{" "}
@@ -53,9 +54,9 @@ export default function Checkout() {
               <div className="input-row-3">
                 <input type="text" placeholder="Expiration Date" />
                 <input type="text" placeholder="CVC/CVV" />
-                <div></div> {/* empty div to fill grid */}
+                <div></div>
               </div>
-            </section>
+            </section>  */}
           </div>
 
           {/* RIGHT SIDE - Order Summary */}

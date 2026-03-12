@@ -39,6 +39,7 @@ export default function Cart() {
                       <p className="price">${item.price}</p>
                     </div>
                   </div>
+
                   <div className="qty-controls">
                     <button onClick={() => updateQty(item.id, item.qty - 1)}>
                       -
@@ -48,6 +49,7 @@ export default function Cart() {
                       +
                     </button>
                   </div>
+
                   <div className="row-total">
                     ${(item.price * item.qty).toFixed(2)}
                   </div>
